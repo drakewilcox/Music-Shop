@@ -1,38 +1,124 @@
-.App {
+body {
   text-align: center;
+  background-color: rgb(255, 235, 195);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.album {
+  width: 28%;
+  margin: 10px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(234, 243, 255);
+  border-radius: 5px;
+  box-shadow: 0 3px 3px #aaa;
+}
+.detailsHeader {
+  background-color: rgb(221, 235, 255);
+  height: 45vh;
+  display: flex;
+  flex-direction: column;
+  justify-content:  center;
+  align-items: center;
+  box-shadow: 0 3px 3px #ccc;
+  margin-bottom: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.album img {
+  width: 100%;
+  height: auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.ablumDetailsImg {
+  border: 1px solid black;
+  width: 28%;
+  margin: 10px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 3px 3px #aaa;
+}
+
+.detailsHeader img {
+  width: 20%;
+  height: auto; 
+}
+
+.albumDetailsButton {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.albums {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.header {
+  background-color: rgb(234, 243, 255);
+  height: 20vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  box-shadow: 0 3px 3px #ccc;
+  margin-bottom: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.header button {
+  width: 7%;
+  padding: 10px;
+  margin: 20px 20px 0 auto;
+  font-size: 20px;
+  border-radius: 5px;
+  border: 1px solid black;
+  box-shadow: 0 3px 3px #ccc;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+
+.header h1 {
+  margin: 0;
+}
+
+.createForm {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  align-items: center;
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 3px 3px #aaa;
+  border-radius: 5px;
+  margin: 20px auto 40px auto;
+}
+
+.createForm h3 {
+  margin: 10px;
+}
+
+.createForm input {
+  width: 96%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid black;
+  margin: 5px;
+}
+
+.createForm button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid black;
+  cursor: pointer;
 }
