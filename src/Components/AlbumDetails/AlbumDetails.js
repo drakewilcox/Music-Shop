@@ -1,9 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const AlbumDetails = () => {
+const AlbumDetails = (props) => {
   return (
-    <div>
-      <p>Description: dfdfsdfsdfsdfsdfds</p>
+    <div >
+      <p>Description: {props.album.description}</p>
       <div className="buttons">
         <button>Buy</button>
         <p>Quantity</p>
@@ -11,6 +12,10 @@ const AlbumDetails = () => {
       </div>
     </div>
   )
+}
+
+AlbumDetails.propTypes = {
+  description: PropTypes.object
 }
 
 export default AlbumDetails;

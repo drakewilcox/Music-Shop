@@ -1,13 +1,18 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const AlbumHeader = (props) => {
   return (
-    <React.Fragment>
-      <img src="https://miro.medium.com/max/2480/1*8FkvzbSdSJ4HNxtuZo5kLg.jpeg" />
-      <h1>Dark Side of the Moon - Pink Floyd</h1>
-      <button>Back to Albums</button>
-    </React.Fragment>
+    <div className="detailsHeader">
+      <img className="albumDetailsImg" src={props.album.image} alt=""/>
+      <h1>{props.album.title} - {props.album.artist}</h1>
+      <button onClick={props.handleBackToAlbums}>Back to Albums</button>
+    </div>
   )
+}
+
+AlbumHeader.propTypes = {
+  album: PropTypes.object
 }
 
 export default AlbumHeader;
