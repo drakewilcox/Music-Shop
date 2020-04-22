@@ -3,11 +3,11 @@ import PropTypes from "prop-types";
 
 const Album = (props) => {
   return (
-    <div className="album" id={props.key}>
-      <h2>{props.title} - {props.artist}</h2>
+    <div className="album" id={props.id}>
       <button type="button">Remove</button>
-      <img src={props.image}></img>
-      <button id={props.key} onClick={props.onAlbumClick}>See Details</button>
+      <img src={props.image} alt=""></img>
+      <h2>{props.title} - {props.artist}</h2>
+      <button className="albumDetailsButton" onClick={() => props.onAlbumClick(props.id)}>See Details</button>
     </div>
   )
 }
@@ -15,7 +15,9 @@ const Album = (props) => {
 Album.propTypes = {
   image: PropTypes.string,
   title: PropTypes.string, 
-  artist: PropTypes.string
+  artist: PropTypes.string,
+  id: PropTypes.string,
+  onAlbumClick: PropTypes.func
 }
 
 export default Album;
