@@ -58,3 +58,4 @@ Copyright (c) 2020 **_Jamison Cozart, Patrick Kille, Drake Wilcox_**
 
 Co-authored-by: Drake Wilcox <drakewilcox@gmail.com>
 Co-authored-by: Patrick Kille <59419677+PRKille@users.noreply.github.com>
+Co-authored-by: jeremy kale padot <jeremy@padot.us>
