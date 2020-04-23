@@ -3,7 +3,7 @@ import AlbumHeader from './AlbumHeader/AlbumHeader';
 import AlbumDetails from './AlbumDetails/AlbumDetails';
 import MainHeader from './MainHeader/MainHeader';
 import MainAlbum from './MainAlbums/MainAlbum';
-import ShoppingCart from './ShoppingCart/ShoppingCart'
+import ShoppingCart from './ShoppingCart/ShoppingCart';
 import '../App.css';
 
 class App extends React.Component {
