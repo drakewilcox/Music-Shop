@@ -1,7 +1,6 @@
 body {
   /* text-align: center; */
   background-color: rgb(255, 235, 195);
-  padding: 5px;
 }
 
 .album {
@@ -114,7 +113,6 @@ body {
   box-shadow: 0 3px 3px #ccc;
   cursor: pointer;
 }
-
 
 
 .header h1 {
