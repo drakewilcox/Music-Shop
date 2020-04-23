@@ -3,6 +3,7 @@ import AlbumHeader from './AlbumHeader/AlbumHeader';
 import AlbumDetails from './AlbumDetails/AlbumDetails';
 import MainHeader from './MainHeader/MainHeader';
 import MainAlbum from './MainAlbums/MainAlbum';
+import ShoppingCart from './ShoppingCart/ShoppingCart'
 import '../App.css';
 
 class App extends React.Component {
@@ -11,6 +12,7 @@ class App extends React.Component {
     super(props);
     this.state = {
       showHomePage: true,
+      showShoppingCart: false,
       albumList: [
         {
           title: "Dark Side of the Moon",
@@ -61,7 +63,8 @@ class App extends React.Component {
           id: "42066696"
         }
       ],
-      currentSelectedAlbum: {}
+      currentSelectedAlbum: {},
+      shoppingCartItems : []
     }
   }
   
@@ -86,10 +89,12 @@ class App extends React.Component {
 
   handleAlbumPurchase = (id) => {
     const selectedAlbum = this.state.albumList.filter(album => album.id === id)[0];
+    const newShoppingCartItems = this.state.shoppingCartItems.concat(selectedAlbum);
     const newInventory = selectedAlbum.inventory -1;
     const updatedAlbum = {...selectedAlbum, inventory: newInventory};
     const oldAlbums = this.state.albumList.filter(album => album.id !== id);
     this.setState({
+      shoppingCartItems: newShoppingCartItems,
       albumList: [...oldAlbums, updatedAlbum],
       currentSelectedAlbum: updatedAlbum
     });
@@ -113,17 +118,35 @@ class App extends React.Component {
     })
   }
 
+  handleShowShoppingCart = () => {
+    this.setState({
+      showShoppingCart: !this.state.showShoppingCart
+    })
+  }
+
   currentPage = () => {
-    if (this.state.showHomePage) {
+    if (this.state.showShoppingCart) {
       return {
-        header: <MainHeader />,
+        header: <MainHeader
+          onShowShoppingCart={this.handleShowShoppingCart}
+          cartItemNumber={this.state.shoppingCartItems.length}/>,
+        body: <ShoppingCart
+          albums={this.state.shoppingCartItems}/>
+      }
+    }
+    else if (this.state.showHomePage) {
+      return {
+        header: <MainHeader 
+          onShowShoppingCart={this.handleShowShoppingCart}
+          cartItemNumber={this.state.shoppingCartItems.length}/>,
         body: <MainAlbum 
             albums={this.state.albumList}
             onAlbumSelection={this.handleAlbumSelection}
             onNewAlbumCreation={this.handleAddingNewAlbum}
             handleAlbumDelete={this.handleAlbumDelete} />
       }
-    } else {
+    }
+     else {
       return {
         header: <AlbumHeader 
           album={this.state.currentSelectedAlbum}
