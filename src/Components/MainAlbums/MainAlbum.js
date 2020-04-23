@@ -27,7 +27,8 @@ function MainAlbum(props){
             image={album.image}
             description={album.description}
             id={album.id}
-            onAlbumClick={props.onAlbumSelection} />
+            onAlbumClick={props.onAlbumSelection}
+            handleAlbumDelete={props.handleAlbumDelete} />
         ))}
       </div>
       
