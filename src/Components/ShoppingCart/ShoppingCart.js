@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 function ShoppingCart(props){
   return (
     <React.Fragment>
+      <h1>YOUR ITEMS: </h1>
       {props.albums.map((album, index) => (
         <div key={index}>
           <p>ARTIST: { album.title }</p>
