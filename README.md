@@ -4,8 +4,7 @@
 
 #### _**Jamison Cozart, Patrick Kille, Drake Wilcox**_
 
-_Component structure:_
-![component structure](/)
+**Live Site:** https://jamisoncozart.github.io/MusicShop/
 
 ## Setup/Installation Requirements
 
