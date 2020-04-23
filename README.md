@@ -39,7 +39,7 @@ _Next, install npm at the project's root directory via the following commands:_
 _Open the contents of the directory in a text editor or IDE of your choice (e.g., to open the contents of the directory in Visual Studio Code on macOS, enter the command "code ." in Terminal)._
 
 ## Design and Development
-
+![WireFrame design](https://i.imgur.com/549P7rZ.png)
 ![component tree image](https://media.discordapp.net/attachments/702552307853689016/703008049429741571/unknown.png)
 
 ## Technologies Used
